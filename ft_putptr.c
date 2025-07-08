@@ -6,17 +6,22 @@
 /*   By: haras <haras@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/07 19:36:35 by haras             #+#    #+#             */
-/*   Updated: 2025/07/07 19:39:22 by haras            ###   ########.fr       */
+/*   Updated: 2025/07/08 15:06:17 by haras            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_putptr(unsigned int n)
+#include "libftprintf.h"
+
+int	ft_putptr(void *arg, char *base)
 {
-    int count;
+	unsigned long	adress;
+	int				count;
 
-    count = 0;
-    if (n >= 10)
-        count += ft_putptr(n / 16);
-
-    return (count);
+	if (arg == NULL)
+		return (write(1, "(nil)", 5));
+	adress = (unsigned long)arg;
+	count = 0;
+	count += ft_putstr("0x");
+	count += ft_base(adress, base);
+	return (count);
 }

@@ -6,13 +6,13 @@
 /*   By: haras <haras@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 16:34:24 by haras             #+#    #+#             */
-/*   Updated: 2025/07/07 17:27:48 by haras            ###   ########.fr       */
+/*   Updated: 2025/07/08 12:59:40 by haras            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    return (write(1, &c, 1)); 
+	return (write(1, &c, 1));
 }
