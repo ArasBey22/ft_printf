@@ -41,12 +41,23 @@
 
 ## 🔧 Derleme
 
-Projeyi derlemek için:
+Projeyi derlemek için terminalde:
 ```bash
 make
 ```
 
-Çıktı olarak `libftprintf.a` isimli statik kütüphane oluşturulur.
+Bu komut, `libftprintf.a` adında bir statik kütüphane oluşturur.
+
+## 🧪 Test Etme (main.c ile)
+
+Projenin test edilmesi için örnek bir `main.c` dosyası oluşturabilir ve şu şekilde derleyebilirsin:
+
+```bash
+cc main.c libftprintf.a
+./a.out
+```
+
+> `main.c` içinde `#include "libftprintf.h"` satırı olmalı.
 
 ## 🧼 Temizlik Komutları
 
